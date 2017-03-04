@@ -88,6 +88,7 @@ p {
 
 li {
 	padding: 6px 0;
+	font-size: 14px;
 }
 @media screen and (max-width: 1500px) {
     section h2, section div, .main {
@@ -139,5 +140,10 @@ li {
 	}
 	section h2, section div, .main, .sidebar {
 		margin: 0 50px;
+	}
+}
+@media screen and (max-width: 480px) {
+	section h2, section div, .main, .sidebar {
+		margin: 0 25px;
 	}
 }
