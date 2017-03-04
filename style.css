@@ -41,7 +41,6 @@ body {
 h1 {
 	text-align: center;
 	padding: 32px;
-	margin: 0;
 	background-image: url("retro-wallpaper-1.jpg");
 	font-size: 4em;
 	font-family: 'Pacifico', cursive;
@@ -49,6 +48,7 @@ h1 {
 	text-shadow: 3px 2px 0px rgb(26, 37, 65);
 	color: #294485;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.48);
+	background-position: center top;
 }
 h1::last-letter {
 	font-size: 10px;
@@ -66,8 +66,7 @@ section h2, section div, .main {
 	max-width: 750px;
 }
 .sidebar {
-	transform: translateY(-331px); /* fusk... */
-	
+	transform: translateY(-372px); /* fusk... */
 }
 footer {
 	transform: translateY(205px);
@@ -82,9 +81,33 @@ footer {
 a {
 	color: #0035b6;
 }
+footer a {
+	
+}
+
 ul {
 	list-style: none;
 }
 p {
 	padding: 5px 0;
+	line-height: 1.4;
+}
+
+li {
+	padding: 3px 0;
+}
+@media screen and (max-width: 1195px) {
+	.sidebar {
+		transform: translateY(0);
+		margin: 0 40px;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+    section h2, section div, .main {
+		margin: 0 40px;
+	}
+	footer {
+		transform: translateY(0);
+	}
 }
