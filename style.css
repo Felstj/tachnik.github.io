@@ -76,7 +76,7 @@ section h2, section div, .main {
 	background-color: #e5e5e5;
 }
 a {
-	color: #0035b6;
+	color: #ec4d04;
 }
 ul {
 	list-style: none;
@@ -89,22 +89,55 @@ p {
 li {
 	padding: 6px 0;
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1500px) {
+    section h2, section div, .main {
+		margin: 0 150px 0 200px;
+		max-width: 750px;
+	}
+}
+@media screen and (max-width: 1450px) {
+    section h2, section div, .main {
+		margin: 0 100px 0 200px;
+		max-width: 750px;
+	}
+}
+@media screen and (max-width: 1400px) {
+    section h2, section div, .main {
+		
+	}
+}
+@media screen and (max-width: 1337px) {
+    .sidebar {
+		transform: translateY(0);
+		margin: 0 200px;
+		padding-top: 8px;
+		display: flex;
+		flex-direction: row;
+		width: 750px;
+	}
+	.sidebar .wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-grow: 1;
+	}
+}
+@media screen and (max-width: 1195px) {
+	.sidebar {
+		margin: 0 100px 0 200px;
+	}
+}
+@media screen and (max-width: 1000px) {
+	section h2, section div, .main, .sidebar {
+		margin: 0 100px;
+	}
+}
+@media screen and (max-width: 650px) {
 	h1 {
 		line-height: 1.1;
 	}
-}
-
-@media screen and (max-width: 1195px) {
-	.sidebar {
-		transform: translateY(0);
-		margin: 0 40px;
-	}
-}
-
-@media screen and (max-width: 1400px) {
-    section h2, section div, .main {
-		margin: 0 40px;
+	section h2, section div, .main, .sidebar {
+		margin: 0 50px;
 	}
 }
