@@ -66,10 +66,7 @@ section h2, section div, .main {
 	max-width: 750px;
 }
 .sidebar {
-	transform: translateY(-372px); /* fusk... */
-}
-footer {
-	transform: translateY(205px);
+	transform: translateY(-393px); /* fusk... */
 }
 .extra1 {
 	background-color: red;
@@ -81,21 +78,24 @@ footer {
 a {
 	color: #0035b6;
 }
-footer a {
-	
-}
-
 ul {
 	list-style: none;
 }
 p {
 	padding: 5px 0;
-	line-height: 1.4;
+	line-height: 1.5;
 }
 
 li {
 	padding: 3px 0;
 }
+
+@media screen and (max-width: 600px) {
+	h1 {
+		line-height: 1.1;
+	}
+}
+
 @media screen and (max-width: 1195px) {
 	.sidebar {
 		transform: translateY(0);
@@ -106,8 +106,5 @@ li {
 @media screen and (max-width: 1400px) {
     section h2, section div, .main {
 		margin: 0 40px;
-	}
-	footer {
-		transform: translateY(0);
 	}
 }
