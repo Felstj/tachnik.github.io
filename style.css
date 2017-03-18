@@ -131,7 +131,7 @@ keyframes fadeIn {
 footer a {
 	position: relative;
 	z-index: 2;
-	padding: 0 4px;
+	padding: 0 2px;
 }
 footer a:first-of-type {
 	padding-left: 0;
