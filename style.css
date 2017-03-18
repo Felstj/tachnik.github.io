@@ -92,18 +92,39 @@ section h2, section div, .main {
 	position: relative;
 	z-index: 2;
 	-webkit-animation: fadeIn 1s forwards;
+	-moz-animation: fadeIn 1s forwards;
+	animation: fadeIn 1s forwards;
 }
-
-@-webkit-keyframes fadeIn {
+keyframes fadeIn {
   0% {
 	opacity: 0;
-    -webkit-transform:  translate(0px, -300px);
+    transform:  translate(0px, -300px);
   }
   100% {
     opacity: 1;
-	-webkit-transform:  translate(0px, -392px);
+	transform:  translate(0px, -392px);
   }
 }
+@-webkit-keyframes fadeIn {
+  0% {
+	opacity: 0;
+    -webkit-transform: translate(0px, -300px);
+  }
+  100% {
+    opacity: 1;
+	-webkit-transform: translate(0px, -392px);
+  }
+}
+
+@-moz-keyframes animationFrames{
+  0% {
+	-moz-transform: translate(0px, -300px);
+  }
+  100% {
+	-moz-transform: translate(0px, -392px);
+  }
+}
+
 .sidebar .wrapper {
 	max-width: 600px;
 }
@@ -188,6 +209,8 @@ li {
 		width: 100%;
 		background-color: #e5e5e5;
 		-webkit-animation: none;
+		animation: none;
+		-moz-animation: none;
 	}
 	.sidebar .wrapper {
 		display: flex;
