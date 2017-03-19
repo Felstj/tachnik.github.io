@@ -95,6 +95,10 @@ section h2, section div, .main {
 	-moz-animation: fadeIn 1s forwards;
 	animation: fadeIn 1s forwards;
 }
+.sidebar h3 {
+	line-height: 1;
+    padding-bottom: 0;
+}
 keyframes fadeIn {
   0% {
 	opacity: 0;
@@ -102,7 +106,7 @@ keyframes fadeIn {
   }
   100% {
     opacity: 1;
-	transform:  translate(0px, -392px);
+	transform:  translate(0px, -383px);
   }
 }
 @-webkit-keyframes fadeIn {
@@ -112,7 +116,7 @@ keyframes fadeIn {
   }
   100% {
     opacity: 1;
-	-webkit-transform: translate(0px, -392px);
+	-webkit-transform: translate(0px, -383px);
   }
 }
 
@@ -121,7 +125,7 @@ keyframes fadeIn {
 	-moz-transform: translate(0px, -300px);
   }
   100% {
-	-moz-transform: translate(0px, -392px);
+	-moz-transform: translate(0px, -383px);
   }
 }
 
@@ -179,7 +183,7 @@ p:first-of-type {
 }
 
 li {
-	padding: 6px 0;
+	padding: 9px 0;
 	font-size: 14px;
 }
 @media screen and (max-width: 1500px) {
