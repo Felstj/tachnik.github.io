@@ -97,6 +97,19 @@ section h2, section div, .main {
 .sidebar h3 {
 	line-height: 1;
     padding-bottom: 0;
+	padding-left: 16px;
+}
+.sidebar h3::before {
+	position: absolute;
+	content: '';
+	background-image: url("ic_label_black_24px.svg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	transform: translateX(-16px);
+	padding-top: 15px;
+	width: 12px;
+	height: 12px;
+	
 }
 @keyframes fadeIn {
   0% {
@@ -136,6 +149,7 @@ section h2, section div, .main {
 .summary a:hover {
 	color: white;
 	background-color: #333;
+	text-decoration: none;
 }
 .summary a::before, .summary a::after {
 	content: '';
@@ -209,7 +223,7 @@ p:first-of-type {
 	padding: 0;
 }
 ul li:first-of-type {
-    padding-top: 4px;
+	padding-top: 7px;
 }
 li {
 	padding: 9px 0;
