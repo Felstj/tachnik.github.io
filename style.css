@@ -87,7 +87,7 @@ section h2, section div, .main {
 	max-width: 600px;
 }
 .sidebar {
-	transform: translateY(-392px); /* fusk... */
+	transform: translateY(-377px); /* fusk... */
 	position: relative;
 	z-index: 2;
 	-webkit-animation: fadeIn 1s forwards;
@@ -105,7 +105,7 @@ section h2, section div, .main {
   }
   100% {
     opacity: 1;
-	transform:  translate(0px, -383px);
+	transform:  translate(0px, -377px);
   }
 }
 @-webkit-keyframes fadeIn {
@@ -115,7 +115,7 @@ section h2, section div, .main {
   }
   100% {
     opacity: 1;
-	-webkit-transform: translate(0px, -383px);
+	-webkit-transform: translate(0px, -377px);
   }
 }
 
@@ -124,7 +124,7 @@ section h2, section div, .main {
 	-moz-transform: translate(0px, -300px);
   }
   100% {
-	-moz-transform: translate(0px, -383px);
+	-moz-transform: translate(0px, -377px);
   }
 }
 .summary a {
@@ -208,7 +208,9 @@ p {
 p:first-of-type {
 	padding: 0;
 }
-
+ul li:first-of-type {
+    padding-top: 4px;
+}
 li {
 	padding: 9px 0;
 	font-size: 14px;
