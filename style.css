@@ -17,28 +17,28 @@
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
-@font-face { 
+@font-face {
 	font-family: "Arial";
 	src: url("fonts/arial.ttf");
 }
-@font-face { 
+@font-face {
 	font-family: "Arial";
 	src: url("fonts/arial_bold.ttf");
 	font-weight: bold;
 }
-@font-face { 
+@font-face {
 	font-family: "MuseoSans-Cyrl";
 	src: url("fonts/MuseoSansCyrl_500.otf");
 }
-@font-face { 
+@font-face {
 	font-family: "MuseoSans";
 	src: url("fonts/MuseoSans_500.ttf");
 }
-@font-face { 
+@font-face {
 	font-family: "Museo";
 	src: url("fonts/Museo500-Regular.ttf");
 }
-@font-face { 
+@font-face {
 	font-family: "Yorkten";
 	src: url("fonts/YorktenNormRegular.otf");
 }
@@ -70,7 +70,6 @@ h1::last-letter {
 }
 body h3 {
 	font-size: 24px;
-	padding-bottom: 6px;
 }
 h2, h3, h2 abbr, h3 abbr {
     padding: 16px 0;
@@ -99,7 +98,7 @@ section h2, section div, .main {
 	line-height: 1;
     padding-bottom: 0;
 }
-keyframes fadeIn {
+@keyframes fadeIn {
   0% {
 	opacity: 0;
     transform:  translate(0px, -300px);
@@ -128,7 +127,41 @@ keyframes fadeIn {
 	-moz-transform: translate(0px, -383px);
   }
 }
-
+.summary a {
+	padding: 4px 6px 4px 24px;
+	border-radius: 2px;
+	transition: all 0.3s ease;
+	position: relative;
+}
+.summary a:hover {
+	color: white;
+	background-color: #333;
+}
+.summary a::before, .summary a::after {
+	content: '';
+	width: 18px;
+	height: 18px;
+	top: 5px;
+	left: 2px;
+	background-image: url("ic_file_download_white_24px.svg");
+	position: absolute;
+	background-repeat: no-repeat;
+	transition: all 0.3s ease;
+    background-size: 100% 100%;
+}
+.summary a::after {
+	content: '';
+	opacity: 0;
+	background-image: url("ic_file_download_black_24px.svg");
+}
+.summary a:hover::before {
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+.summary a:hover::after {
+	opacity: 1;
+	transition: all 0.3s ease;
+}
 .sidebar .wrapper {
 	max-width: 600px;
 }
@@ -160,12 +193,6 @@ footer::after {
 	height: 130px;
 	background-color: #e5e5e5;
 }
-/* .extra1 { */
-	/* width: 100%; */
-	/* height: 130px; */
-	/* border-top: 1px solid #c6c6c6; */
-	/* background-color: #e5e5e5; */
-/* } */
 a {
 	color: #ec4d04;
 }
@@ -200,7 +227,7 @@ li {
 }
 @media screen and (max-width: 1400px) {
     section h2, section div, .main {
-		
+
 	}
 }
 @media screen and (max-width: 1337px) {
