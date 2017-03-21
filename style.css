@@ -197,7 +197,7 @@ a:hover {
 	max-width: 600px;
 }
 footer {
-	height: 52px;
+	height: 64.5px;
 	text-align: center;
 	display: flex;
     justify-content: space-between;
@@ -323,7 +323,6 @@ li {
 		-webkit-animation: none;
 		animation: none;
 		-moz-animation: none;
-		margin-top: 16px;
 		border-top: 1px solid #c6c6c6;
 	}
 	.sidebar .wrapper {
@@ -357,6 +356,9 @@ li {
 	}
 	.sidebar {
 		padding: 0 50px;
+	}
+	.sidebar .wrapper {
+		flex-direction: column;
 	}
 }
 @media screen and (max-width: 480px) {
