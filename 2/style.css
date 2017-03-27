@@ -10,6 +10,10 @@
 	font-weight: bold;
 }
 
+p {
+	width: 600px;
+}
+
 .intro header {
 	min-height: 100vh;
 	background-color: rgb(53, 132, 192);
@@ -24,11 +28,13 @@
 .intro header::after {
 	position: absolute;
 	content: '';
-	width: 72px;
-	height: 72px;
-	background-image: url('scollicon.svg');
+	width: 64px;
+	height: 64px;
+	background-image: url('scollicon2.svg');
+	background-size: cover;
 	bottom: 0;
 	animation: fadeup 2s forwards;
+
 }
 
 @keyframes fadeup {
@@ -47,10 +53,22 @@
 
 .intro header * {
 	color: white;
+	opacity: 0;
+	animation: fadein 0.5s forwards;
 }
 .intro header h1 {
 	font-size: 48px;
 	font-family: Novecentos;
+	opacity: 0;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .intro header h2 abbr {
