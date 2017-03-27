@@ -2,16 +2,62 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Georgia";
 }
 
 @font-face {
 	font-family: "Novecentos";
-	src: url("Novecentos_bold.otf");
+	src: url("fonts/Novecentos_bold.otf");
 	font-weight: bold;
 }
+@font-face {
+	font-family: "Futura";
+	src: url("fonts/Futura.otf");
+}
+@font-face {
+	font-family: "Georgia";
+	src: url("fonts/Georgia.ttf");
+}
+@font-face {
+	font-family: "Sanchez";
+	src: url("fonts/Sanchez-Regular.otf");
+}
+@font-face {
+	font-family: "Sanchez";
+	src: url("fonts/Sanchez-italic.otf");
+	font-style: italic;
+}
 
+p, h3:not(.archives):not(.resources):not(.select) {
+	width: 750px;
+}
+h3 {
+	font-family: "Futura";
+	font-weight: normal;
+	font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 54.4px;
+}
 p {
-	width: 600px;
+	font-size: 18px;
+    padding: 9px 0;
+    line-height: 1.5;
+}
+.summary p {
+	font-family: "Sanchez";
+	font-size: 16px;
+	font-style: italic;
+}
+.summary a {
+	color: #e33a25;
+}
+.summary p:nth-of-type(2) {
+	font-style: normal;
+}
+ul {
+	list-style-type: none;
 }
 
 .intro header {
@@ -24,17 +70,6 @@ p {
 	position: relative;
 	overflow: hidden;
 	background: radial-gradient(ellipse at center, rgba(65,170,240,1) 0%, rgba(65,170,240,1) 28%, rgba(43,135,201,1) 100%);
-}
-.intro header::after {
-	position: absolute;
-	content: '';
-	width: 64px;
-	height: 64px;
-	background-image: url('scollicon2.svg');
-	background-size: cover;
-	bottom: 0;
-	animation: fadeup 2s forwards;
-
 }
 
 @keyframes fadeup {
@@ -51,15 +86,14 @@ p {
   }
 }
 
-.intro header * {
+.intro header > * {
 	color: white;
 	opacity: 0;
-	animation: fadein 0.5s forwards;
+	animation: fadein 0.8s forwards;
 }
 .intro header h1 {
 	font-size: 48px;
 	font-family: Novecentos;
-	opacity: 0;
 }
 
 @keyframes fadein {
@@ -81,6 +115,17 @@ p {
 	font-family: Novecentos;
 	line-height: 1;
 }
+.intro header::after {
+	position: absolute;
+	content: '';
+	width: 64px;
+	height: 64px;
+	background-image: url('scollicon2.svg');
+	background-size: cover;
+	bottom: 0;
+	animation: fadeup 2s forwards;
+
+}
 .summary {
 	padding: 16px 200px;
     background-color: #333333;
@@ -89,8 +134,19 @@ p {
     flex-direction: column;
     align-items: center;
 }
-.summary p {
-	display: inline-block;
+.preamble, .main > div {
+	padding: 50px 200px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.preamble {
+	background-color: #9A2617;
+	color: white;
+}
+
+.preamble p:nth-of-type(1) {
+    padding-top: 0;
 }
 .page-wrapper {
 	display: flex;
@@ -101,6 +157,11 @@ p {
 }
 .sidebar {
 	order: 2;
+}
+.sidebar .wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 .main {
 	order: 3;
