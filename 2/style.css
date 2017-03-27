@@ -42,12 +42,16 @@ h3 {
 }
 p {
 	font-size: 18px;
-    padding: 9px 0;
+    padding: 8px 0;
     line-height: 1.5;
+}
+p:nth-of-type(1) {
+    padding-top: 0;
 }
 .summary p {
 	font-family: "Sanchez";
 	font-size: 16px;
+	padding-top: 8px;
 	font-style: italic;
 }
 .summary a {
@@ -134,7 +138,7 @@ ul {
     flex-direction: column;
     align-items: center;
 }
-.preamble, .main > div {
+.preamble, .main > div, .sidebar {
 	padding: 50px 200px;
 	display: flex;
     flex-direction: column;
@@ -143,10 +147,6 @@ ul {
 .preamble {
 	background-color: #9A2617;
 	color: white;
-}
-
-.preamble p:nth-of-type(1) {
-    padding-top: 0;
 }
 .page-wrapper {
 	display: flex;
