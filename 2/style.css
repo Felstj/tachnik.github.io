@@ -148,6 +148,9 @@ ul {
 	background-color: #9A2617;
 	color: white;
 }
+.preamble h3 {
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
 .page-wrapper {
 	display: flex;
     flex-direction: column;
