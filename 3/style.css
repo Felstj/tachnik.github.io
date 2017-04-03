@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+	color: white;
+	box-sizing: border-box;
+	font-family: "Helvetica";
+}
+@font-face {
+	font-family: "Helvetica";
+	src: url("fonts/helvetica-light.ttf");
+}
+@font-face {
+	font-family: "Helvetica";
+	src: url("fonts/Helvetica-bold.otf");
+	font-weight: bold;
+}
+html, body {
+    height: 100vh;
+}
+
+body {
+    background-image: url("bio.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+	padding: 6vh 20.3vw 27vh 22vw;
+}
+h3 {
+	padding: 24px 0;
+}
+.page-wrapper {
+    max-height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+	padding: 0 20vw;
+}
