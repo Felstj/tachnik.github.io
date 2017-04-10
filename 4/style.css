@@ -1,0 +1,238 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Museo';
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: "Futura";
+	src: url("fonts/Futura_bold.ttf");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Helvetica";
+	src: url("fonts/helvetica-light.ttf");
+}
+@font-face {
+	font-family: "Helvetica";
+	src: url("fonts/Helvetica-bold.otf");
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Museo_Slab";
+	src: url("fonts/Museo_Slab_500_Italic.ttf");
+	font-style: italic;
+}
+@font-face {
+	font-family: "Museo";
+	src: url("fonts/MuseoSans_500.ttf");
+}
+@font-face {
+	font-family: "Museo_Slab";
+	src: url("fonts/Museo_Slab_500.ttf");
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v21/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+.page-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-wrapper > div {
+	position: relative;
+	z-index: 1;
+}
+
+.intro {
+	order: 2;
+	background: radial-gradient(ellipse at center, rgba(65,170,240,1) 0%, rgba(65,170,240,1) 28%, rgba(43,135,201,1) 100%);
+}
+header, .summary {
+	height: calc(50vh);
+}
+header {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.summary {
+	text-align: center;
+}
+.preamble {
+    background-color: white;
+}
+.main {
+	order: 3;
+}
+h1 {
+	display: inline-block;
+	font-size: 32px;
+	position: absolute;
+    top: 0;
+	left: 0;
+	color: white;
+	z-index: 3;
+}
+h2, h2 abbr {
+	text-align: center;
+	font-size: 48px;
+	position: relative;
+	font-family: 'Museo_Slab';
+	font-style: italic;
+	letter-spacing: 4px;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+.summary p {
+	line-height: 1.4;
+}
+.summary::after {
+	content: '';
+	position: absolute;
+	width: 334px;
+	height: 190px;
+	background-size: cover;
+	transform: translateX(-50%);
+	background-image: url('mac.png');
+}
+.summary a {
+	padding: 4px;
+	padding-left: 22px;
+	position: relative;
+	transition: all 0.2s;
+	border-radius: 3px;
+}
+.summary a:hover {
+	background-color: black;
+}
+.summary a::before {
+	content: 'file_download';
+	position: absolute;
+	font-size: 18px;
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	left: 1px;
+	text-transform: none;
+}
+body h2::before {
+	transform: translateX(-100%);
+	left: -10px;
+}
+h2::before, h2::after {
+	content: '';
+	width: 64px;
+	height: 3px;
+	top: 50%;
+	background-color: white;
+	position: absolute;
+	transform: translateX(100%);
+    right: -10px;
+}
+.sidebar {
+	order: 1;
+	z-index: 2;
+	width: 100%;
+	position: absolute;
+}
+.sidebar, h1 {
+	padding-top: 8px;
+	padding-left: 8px;
+}
+.sidebar .wrapper {
+	display: flex;
+	justify-content: space-around;
+	padding-left: 260px;
+	padding-right: 100px;
+}
+.sidebar h3 {
+	line-height: 40px;
+	position: relative;
+	font-size: 18px;
+	color: transparent;
+	font-weight: normal;
+	padding-right: 24px;
+	text-transform: uppercase;
+}
+.sidebar h3::before {
+	content: 'Select a Design';
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.sidebar h3::after {
+	content: 'keyboard_arrow_down';
+	position: absolute;
+	color: white;
+	transform: rotateX(180deg);
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 40px;
+	text-transform: none;
+}
+
+@keyframes flip {
+	0% {
+		transform: rotateX(180deg);
+	}
+	100% {
+		transform: rotateX(0deg);
+	}
+}
+
+.sidebar div:nth-of-type(2) h3::before {
+	content: 'Archives';
+}
+
+.sidebar div:nth-of-type(3) h3::before {
+	content: 'Resources';
+}
+
+li {
+	display: none;
+	padding: 10px;
+	color: black;
+}
+li:hover {
+    background-color: rgba(0, 0, 0, 0.17);
+}
+li a:hover {
+    text-decoration: underline;
+}
+li a {
+	text-decoration: none;
+	color: white;
+}
+ul {
+	position: absolute;
+    list-style-type: none;
+    margin-top: -8px;
+    margin-left: -8px;
+    background-color: #0875c2;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+	opacity: 0;
+	border-right: 8px solid #064d81;
+}
+.sidebar div div:hover ul li {
+	display: list-item;
+}
+.sidebar div div:hover ul {
+    opacity: 1;
+    transition: all 0.4s;
+}
+.sidebar div div:hover h3::after {
+	animation: flip 0.4s forwards;
+}
