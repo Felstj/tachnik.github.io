@@ -4,6 +4,7 @@
 	color: white;
 	box-sizing: border-box;
 	font-family: "Helvetica";
+	-webkit-user-select: none;
 }
 @font-face {
 	font-family: "Helvetica";
@@ -25,11 +26,17 @@ body {
 	padding: 6vh 20.3vw 27vh 22vw;
 }
 h3 {
-	padding: 24px 0;
+	padding: 24px 0 0 0;
+	text-align: center;
 }
 .page-wrapper {
     max-height: 100%;
     overflow: scroll;
     overflow-x: hidden;
 	padding: 0 20vw;
+}
+li {
+	color: transparent;
+	display: flex;
+	justify-content: space-between;
 }

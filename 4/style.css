@@ -51,7 +51,7 @@
 
 .intro {
 	order: 2;
-	background: radial-gradient(ellipse at center, rgba(65,170,240,1) 0%, rgba(65,170,240,1) 28%, rgba(43,135,201,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(65,170,240,1) 0%, rgb(42, 159, 241) 28%, rgba(43,135,201,1) 100%);
 }
 header, .summary {
 	height: calc(50vh);
