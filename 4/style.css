@@ -98,7 +98,7 @@ header {
 h1 {
 	display: inline-block;
 	font-size: 32px;
-	position: absolute;
+	line-height: 38px;
     top: 0;
 	left: 0;
 	color: white;
@@ -112,12 +112,37 @@ h2, h2 abbr {
 	font-style: italic;
 	letter-spacing: 4px;
 }
+h3 {
+	font-family: 'Museo';
+	font-size: 36px;
+	line-height: 1;
+	width: 600px;
+	padding-top: 1em;
+}
+p, h3 {
+	max-width: 600px;
+}
 a {
-	color: white;
 	text-decoration: none;
 }
-.summary p {
+p, p abbr {
+	font-size: 18px;
+	font-family: 'Museo_slab';
 	line-height: 1.5;
+	padding-bottom: 8px;
+}
+.preamble, .main > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.summary p, .summary abbr {
+	line-height: 1.5;
+	color: #14405e;
+	max-width: initial;
+	font-size: 16px;
+	font-family: 'Museo';
+	padding-bottom: 0;
 }
 .summary a {
 	padding: 4px;
@@ -160,9 +185,9 @@ h2::before, h2::after {
 	order: 1;
 	z-index: 2;
 	width: 100%;
-	position: absolute;
 	display: inline-flex;
 	justify-content: flex-end;
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .sidebar .wrapper > div {
@@ -170,8 +195,8 @@ h2::before, h2::after {
 }
 
 .sidebar, h1 {
-	padding-top: 8px;
-	padding-left: 8px;
+	padding: 8px 0 8px 8px;
+	position: fixed;
 }
 .sidebar .wrapper {
 	display: flex;
@@ -182,8 +207,11 @@ h2::before, h2::after {
 	font-size: 18px;
 	color: transparent;
 	font-weight: normal;
+	padding: 0;
+	width: initial;
 	padding-right: 24px;
 	text-transform: uppercase;
+	font-family: 'Museo';
 }
 .sidebar h3::before {
 	content: 'Select a Design';
